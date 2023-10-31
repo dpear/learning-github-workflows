@@ -21,3 +21,5 @@ jobs:
       - name: Install dependencies # Replace with your dependency installation command
         run: |
           pip install depp-test==0.3.1
+        run:
+          pip install somethingthatdoesntexist
