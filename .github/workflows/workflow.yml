@@ -26,3 +26,21 @@ jobs:
       - name: Install dependencies # Replace with your dependency installation command
         run: |
           pip install depp-test==0.3.1
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - openjdk
+
+  run:
+    - python
+    - openjdk
+    - biom-format
+    - qiime2
+    - q2-types
+    - sepp
+    - ijson
+    # they imported a private function which doesn't exist anymore...
+    # https://github.com/smirarab/sepp/blob/66cf22cfb9ca22ed9e9074984018d099617b3c6a/sepp/tree.py#L25
+    - dendropy 4.5.2
